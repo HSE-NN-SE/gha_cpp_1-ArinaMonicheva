@@ -49,15 +49,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: waiting
-        run:
-          sleep 15
+      - uses: actions/download-artifact@v2
           
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
-          #args: ${{ my-artifact }}
-          document: program1.exe
+          document: my-artifact/program1.exe
           #message: exe file

@@ -55,7 +55,7 @@ jobs:
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.ME_TELEGA }}
+          to: 880680577
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
           document: my-artifact/program1.exe
           message: exe file here

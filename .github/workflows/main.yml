@@ -56,6 +56,6 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: 880680577
-          token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
+          token: 1718040746:AAE9KzbVvy2eW8qZoKsBghdIjPULoP62W1Q
           document: my-artifact/program1.exe
           message: exe file here

@@ -58,4 +58,4 @@ jobs:
           to: ${{ secrets.ME_TELEGA }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
           document: my-artifact/program1.exe
-          #message: exe file
+          message: exe file

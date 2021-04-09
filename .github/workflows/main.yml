@@ -16,26 +16,6 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  message:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      - name: waiting
-        run:
-          sleep 10
-          
-      - name: send custom message with args
-        uses: appleboy/telegram-action@0.0.3
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          #args: ${{ my-artifact }}
-          message: exe file
           
   build:
       runs-on: windows-latest
@@ -58,3 +38,26 @@ jobs:
           with:
             name: my-artifact
             path: "*.exe"
+           
+           
+  message:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      - name: waiting
+        run:
+          sleep 10
+          
+      - name: send custom message with args
+        uses: appleboy/telegram-action@0.0.3
+        with:
+          to: ${{ secrets.TELEGRAM_TO_DEBUG }}
+          token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
+          #args: ${{ my-artifact }}
+          document: program1.exe
+          #message: exe file

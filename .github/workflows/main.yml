@@ -45,5 +45,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: ${{ my-artifact }}
+          #args: ${{ my-artifact }}
           message: exe file

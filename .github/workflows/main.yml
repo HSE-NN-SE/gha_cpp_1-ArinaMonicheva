@@ -39,3 +39,11 @@ jobs:
         with:
           name: my-artifact
           path: "*.exe"
+          
+      - name: send custom message with args
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: ${{ my-artifact }}
+          message: exe file

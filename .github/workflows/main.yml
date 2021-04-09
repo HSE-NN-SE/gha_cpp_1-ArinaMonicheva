@@ -31,5 +31,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run hello script
         run: |
-          cl /EHsc task1.h task1.cpp main.cpp /link /out:program1.exe
+          cl /EHsc main.cpp /link /out:program1.exe
           echo Success
